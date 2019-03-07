@@ -1,0 +1,218 @@
+    /*-- Configurations --*/
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Helvatica", sans-serif;
+  color: #4A4A4A;
+  background-color: hsl(180, 9%, 96%);
+}
+
+a {
+  color: #4A4A4A;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+    /*-- Global styles --*/
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  max-width: 60%;
+  padding: 2rem 1.5rem;
+}
+
+img.icon {
+  height: 3.5rem;
+}
+
+.back-gray {
+  background-color: hsl(0, 0%, 85%);
+}
+
+.title {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+    /*-- Header --*/
+
+header {
+  width: 100%;
+  border-bottom: 1px solid;
+}
+/* logo */
+.bar {
+  height: 4rem;
+  padding: 0 1.5rem;
+}
+
+.bar .colmar-academy {
+  font-size: 2rem;
+  text-transform: uppercase;
+  flex: 1;
+}
+
+.bar strong.colmar {
+  font-weight: bold;
+}
+/* Navegation */
+.bar nav {
+  font-size: 1.5rem;
+}
+nav ul li {
+  padding-left: 16px;
+}
+
+    /*-- Jumbotron banner --*/
+
+section {
+  max-width: 100%;
+}
+
+section.jumbotron {
+  width: 100%;
+}
+.jumbotron img.banner {
+  width: 100%;
+}
+
+.headline-banner {
+  line-height: 1.2;
+  width: 30%;
+  margin-left: 1.5rem;
+}
+
+.headline-banner h3 {
+  line-height: 1.5;
+}
+
+.headline-banner .botton {
+  text-align: center;
+  width: 90%;
+  padding: 0.5rem;
+  margin-top: 2.5rem;
+  background-color: hsl(0, 0%, 29%);
+}
+
+.botton span {
+  font-size: 1.75rem;
+  color: white;
+}
+
+    /*-- About of Academy --*/
+
+.academy {
+  text-align: left;
+  align-items: flex-start;
+}
+/* Quotation */
+.qoute {
+    border-right: 2px solid #D8D8D8;
+}
+
+.qoute img {
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.content h6 {
+  margin-top: 2rem;
+}
+/* Academy */
+.about-academy {
+  width: 40%;
+}
+
+.news {
+  padding-top: 1rem;
+}
+
+section.academy .item {
+  border-bottom: 2px solid #D8D8D8;
+}
+
+.news div.image {
+  width: 35%;
+  margin: 1rem;
+}
+
+.image img {
+  width: 100%;
+}
+
+.news .text {
+  width: 65%;
+}
+
+.news .text p {
+  margin-top: 0.5rem;
+}
+
+.news .text h5 {
+  color: #4A90E2;
+  margin-top: 0.5rem;
+}
+
+.news .guest.item {
+  border-bottom: none;
+}
+    /*-- Start learning --*/
+
+section .careers {
+  padding: 0.5rem 2.5rem 0 4.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section .path {
+  min-width: 20rem;
+  width: 30%;
+  margin: 0 2rem 2rem 0;
+  background-color: white;
+  flex-grow: 1;
+}
+
+section .path img {
+  width: 100%;
+}
+
+section .path .details {
+  text-align: left;
+  padding: 1rem;
+}
+
+.details h4 {
+  padding: 0.5rem 0;
+}
+
+    /*-- Thesis exhibit --*/
+
+.video-urban h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+    /*-- Footer --*/
+
+footer.flex {
+  height: 4rem;
+  border-top: 2px solid #D8D8D8;
+  padding: 1.5rem 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+}
