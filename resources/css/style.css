@@ -193,6 +193,7 @@ section .path img {
 
 section .path .details {
   text-align: left;
+  min-height: 12.5rem;
   padding: 1rem;
 }
 
