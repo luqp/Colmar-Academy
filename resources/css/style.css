@@ -1,34 +1,56 @@
+@font-face {
+  font-family: 'Merriweather';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Merriweather Light Italic'), local('Merriweather-LightItalic'), url(https://fonts.gstatic.com/s/merriweather/v20/u-4l0qyriQwlOrhSvowK_l5-eR7lXff4jvw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
     /*-- Configurations --*/
 html {
   font-size: 16px;
 }
 
 body {
-  font-family: "Helvatica", sans-serif;
-  color: #4A4A4A;
-  background-color: hsl(180, 9%, 96%);
+  font-family: "Source Sans Pro", "Helvatica", sans-serif;
+  color: hsl(209, 61%, 16%);
+  background-color: white;
 }
 
 a {
-  color: #4A4A4A;
+  font-size: 1.125rem;
+  color: hsl(209, 23%, 60%);
   text-decoration: none;
 }
 
 h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+  color: hsl(205, 100%, 21%);
 }
 
     /*-- Global styles --*/
 
-.flex {
+.flex-content {
+  margin: 0 3.25rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.flex {
+  display: flex;
 }
 
 .content {
@@ -36,119 +58,165 @@ h3 {
   padding: 2rem 1.5rem;
 }
 
-img.icon {
-  height: 3.5rem;
+.dark-blue {
+  color: hsl(205, 100%, 21%);
 }
 
-.back-gray {
-  background-color: hsl(0, 0%, 85%);
-}
-
-.title {
-  text-align: center;
-  padding-top: 2rem;
+.img-shadow {
+  width: 100%;
+  box-shadow: 0px 5px 15px hsl(210, 6%, 42%, 0.73);
 }
 
     /*-- Header --*/
 
-header {
-  width: 100%;
-  border-bottom: 1px solid;
-}
-/* logo */
-.bar {
-  height: 4rem;
-  padding: 0 1.5rem;
+header div.flex-content {
+  height: 5rem;
 }
 
-.bar .colmar-academy {
+/* logo */
+header svg.icon {
+  height: 2rem;
+  width: auto;
+  margin-right:0.5rem;
+}
+
+header .colmar-academy {
   font-size: 2rem;
+  color: hsl(209, 23%, 60%);
   text-transform: uppercase;
   flex: 1;
 }
 
-.bar strong.colmar {
-  font-weight: bold;
+header strong.colmar {
+  font-weight: 700;
 }
+
 /* Navegation */
-.bar nav {
-  font-size: 1.5rem;
+header ul li {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
 }
-nav ul li {
-  padding-left: 16px;
+
+header ul li:last-child {
+  background-color: hsl(205, 65%, 55%);
+  border-radius: 3px;
+  margin-left: 1rem;
+}
+
+header ul li:last-child a {
+  color: hsl(205, 100%, 97%);
 }
 
     /*-- Jumbotron banner --*/
 
-section {
-  max-width: 100%;
-}
-
 section.jumbotron {
   width: 100%;
+  background-image: linear-gradient(25deg, #CAE3F5, #F0F7FC, white);
 }
-.jumbotron img.banner {
-  width: 100%;
+
+.img-banner {
+  text-align: left;
+  width: 60%;
+  padding: 3.25rem 0;
 }
 
 .headline-banner {
-  line-height: 1.2;
-  width: 30%;
-  margin-left: 1.5rem;
+  line-height: 1;
+  width: 40%;
+  margin-left: 3.5rem;
 }
 
-.headline-banner h3 {
-  line-height: 1.5;
+.headline-banner p {
+  font-size: 2.25rem;
+  font-weight: lighter;
+  line-height: 1.25;
+  color: hsl(209, 61%, 16%);
+  margin-top: 2rem;
 }
 
 .headline-banner .botton {
+  color: hsl(205, 100%, 97%);
   text-align: center;
-  width: 90%;
-  padding: 0.5rem;
-  margin-top: 2.5rem;
-  background-color: hsl(0, 0%, 29%);
+  max-width: 18rem;
+  width: 50%;
+  padding: 1.25rem 0;
+  margin-top: 2rem;
+  background-color: hsl(205, 65%, 55%);
+  border-radius: 4px;
+  justify-content: center;
 }
 
 .botton span {
-  font-size: 1.75rem;
-  color: white;
+  font-size: 2rem;
+}
+
+.botton i {
+  margin-right: 1rem;
 }
 
     /*-- About of Academy --*/
 
-.academy {
-  text-align: left;
-  align-items: flex-start;
-}
 /* Quotation */
-.qoute {
-    border-right: 2px solid #D8D8D8;
+.quote {
+  width: 60%;
 }
 
-.qoute img {
-  max-width: 100%;
+.quote img {
   margin-bottom: 2rem;
 }
 
-.content h6 {
-  margin-top: 2rem;
+.quote i {
+  color: #DCEEFB;
+  position: relative;
+  position: inline-block;
+  z-index: 0;
+  top: 1rem;
 }
+
+.quote div.cite {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  padding: 1.5rem 12rem 0 4rem;
+  position: relative;
+  z-index: 2;
+  top: -4rem;
+}
+
+.quote q {
+  font-family: 'Merriweather';
+  font-size: 1.125rem;
+  color: hsl(209, 61%, 16%);
+}
+
+.quote h6 {
+  color: hsl(210, 22%, 49%);
+  margin-top: 1.12rem;
+}
+
 /* Academy */
-.about-academy {
-  width: 40%;
+.academy div.flex-content {
+  padding-top: 3.25rem;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .news {
-  padding-top: 1rem;
+  width: 35%;
+  margin-left: 3.25rem;
 }
 
 section.academy .item {
-  border-bottom: 2px solid #D8D8D8;
+  background-color: hsl(200, 100%, 99%);
+  border: 2px solid hsl(210, 24%, 93%);
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
 }
 
 .news div.image {
   width: 35%;
-  margin: 1rem;
+  margin: 1.25rem;
+  border-radius: 4px;
 }
 
 .image img {
@@ -156,26 +224,29 @@ section.academy .item {
 }
 
 .news .text {
-  width: 65%;
+  width: 60%;
+  padding: 2rem 1.125rem 1rem 0;
 }
 
 .news .text p {
-  margin-top: 0.5rem;
+  color: hsl(209, 34%, 30%);
+  margin: 0.5rem 0 1.125rem 0;
 }
 
 .news .text h5 {
   color: #4A90E2;
-  margin-top: 0.5rem;
 }
 
-.news .guest.item {
-  border-bottom: none;
-}
     /*-- Start learning --*/
 
+.caption {
+  padding-bottom: 1.125rem;
+  margin-bottom: 3rem;
+  border-bottom: 3px solid hsl(210, 24%, 93%);
+}
+
 section .careers {
-  padding: 0.5rem 2.5rem 0 4.5rem;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
