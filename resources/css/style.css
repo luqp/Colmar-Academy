@@ -13,6 +13,7 @@ html {
 
 body {
   font-family: "Source Sans Pro", "Helvatica", sans-serif;
+  line-height: 1.5;
   color: hsl(209, 61%, 16%);
   background-color: white;
 }
@@ -24,7 +25,7 @@ a {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 4.5rem;
 }
 
 h2 {
@@ -32,7 +33,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 h1, h2, h3 {
@@ -53,11 +54,6 @@ h1, h2, h3 {
   display: flex;
 }
 
-.content {
-  max-width: 60%;
-  padding: 2rem 1.5rem;
-}
-
 .dark-blue {
   color: hsl(205, 100%, 21%);
 }
@@ -74,7 +70,7 @@ header div.flex-content {
 }
 
 /* logo */
-header svg.icon {
+svg.icon {
   height: 2rem;
   width: auto;
   margin-right:0.5rem;
@@ -113,17 +109,18 @@ header ul li:last-child a {
 section.jumbotron {
   width: 100%;
   background-image: linear-gradient(25deg, #CAE3F5, #F0F7FC, white);
+  margin-bottom: 3.25rem;
 }
 
 .img-banner {
   text-align: left;
-  width: 60%;
+  width: 50%;
   padding: 3.25rem 0;
 }
 
 .headline-banner {
   line-height: 1;
-  width: 40%;
+  width: 45%;
   margin-left: 3.5rem;
 }
 
@@ -158,15 +155,15 @@ section.jumbotron {
     /*-- About of Academy --*/
 
 /* Quotation */
-.quote {
+.content {
   width: 60%;
 }
 
-.quote img {
+.content .media {
   margin-bottom: 2rem;
 }
 
-.quote i {
+.content i {
   color: #DCEEFB;
   position: relative;
   position: inline-block;
@@ -174,7 +171,7 @@ section.jumbotron {
   top: 1rem;
 }
 
-.quote div.cite {
+.content div.cite {
   font-size: 1.125rem;
   line-height: 1.75;
   padding: 1.5rem 12rem 0 4rem;
@@ -183,22 +180,20 @@ section.jumbotron {
   top: -4rem;
 }
 
-.quote q {
+.content q {
   font-family: 'Merriweather';
   font-size: 1.125rem;
   color: hsl(209, 61%, 16%);
 }
 
-.quote h6 {
+.content h6 {
   color: hsl(210, 22%, 49%);
   margin-top: 1.12rem;
 }
 
 /* Academy */
 .academy div.flex-content {
-  padding-top: 3.25rem;
   align-items: flex-start;
-  justify-content: space-between;
 }
 
 .news {
@@ -229,6 +224,7 @@ section.academy .item {
 }
 
 .news .text p {
+  font-size: 1.125rem;
   color: hsl(209, 34%, 30%);
   margin: 0.5rem 0 1.125rem 0;
 }
@@ -246,15 +242,16 @@ section.academy .item {
 }
 
 section .careers {
-  justify-content: space-between;
+  margin: 0 3.5rem 0 7.5rem;
   flex-wrap: wrap;
 }
 
 section .path {
   min-width: 20rem;
-  width: 30%;
-  margin: 0 2rem 2rem 0;
+  width: 25%;
+  margin: 0 4rem 4rem 0;
   background-color: white;
+  box-shadow: 0 3px 6px hsla(210, 6%, 42%, 0.73);
   flex-grow: 1;
 }
 
@@ -264,27 +261,86 @@ section .path img {
 
 section .path .details {
   text-align: left;
-  min-height: 12.5rem;
-  padding: 1rem;
+  min-height: 17rem;
+  padding: 1.25rem 2.75rem;
 }
 
 .details h4 {
-  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: hsl(209, 23%, 60%);
+  padding-top: 0.5rem;
 }
 
+.details ul li {
+  font-size: 1.25rem;
+  color: hsl(209, 34%, 30%);
+  display: flex;
+  align-items: center;
+}
+
+.details ul li i {
+  font-size: 0.875rem;
+  color: hsl(205, 84%, 74%);
+  margin-right: 0.75rem;
+  font-weight: 600;
+}
     /*-- Thesis exhibit --*/
 
-.video-urban h3 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+section.thesis {
+  margin: 3.25rem 0 5rem 0;
+}
+
+.thesis .content p {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 1.75rem;
 }
 
     /*-- Footer --*/
 
-footer.flex {
-  height: 4rem;
-  border-top: 2px solid #D8D8D8;
-  padding: 1.5rem 1rem;
-  justify-content: space-between;
-  align-items: flex-start;
+footer {
+  color: hsl(205, 100%, 97%);
+  background-color: hsl(205, 65%, 55%);
+}
+
+footer div.flex-content {
+  height: 15rem;
+  padding: 4rem 0 7.5rem 0;
+  flex-direction: column;
+}
+
+footer .language i {
+  padding: 1.5rem 0.5rem;
+}
+
+footer .academy-logo {
+    align-items: center;
+}
+
+footer .icon .color {
+  fill: hsl(205, 100%, 97%);
+}
+
+footer .colmar-academy {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+footer .dark-blue {
+  font-weight: normal;
+}
+
+footer nav {
+  padding: 1rem 0;
+}
+
+footer nav span {
+  font-weight: 600;
+  padding: 0 1rem;
+}
+
+footer nav span a {
+  font-size: 1.25rem;
+  color: hsl(205, 100%, 97%);
 }
