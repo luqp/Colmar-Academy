@@ -9,6 +9,7 @@
     /*-- Configurations --*/
 html {
   font-size: 16px;
+  width: 100%;
 }
 
 body {
@@ -22,6 +23,8 @@ a {
   font-size: 1.125rem;
   color: hsl(209, 23%, 60%);
   text-decoration: none;
+    -webkit-transition: border-color 600ms, color 550ms;
+  transition: border-color 600ms, color 550ms;
 }
 
 h1 {
@@ -34,6 +37,7 @@ h2 {
 
 h3 {
   font-size: 1.75rem;
+  transition: color 600ms;
 }
 
 h1, h2, h3 {
@@ -60,7 +64,7 @@ h1, h2, h3 {
 
 .img-shadow {
   width: 100%;
-  box-shadow: 0px 5px 15px hsl(210, 6%, 42%, 0.73);
+  box-shadow: 0px 5px 15px hsla(210, 6%, 42%, 0.73);
 }
 
     /*-- Header --*/
@@ -83,6 +87,10 @@ header .colmar-academy {
   flex: 1;
 }
 
+.colmar-academy:hover {
+  cursor: pointer;
+}
+
 header strong.colmar {
   font-weight: 700;
 }
@@ -94,14 +102,30 @@ header ul li {
   padding: 0.5rem 1rem;
 }
 
+header ul li a:hover {
+  color: hsl(205, 100%, 21%);
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid hsl(205, 100%, 21%);
+}
+
 header ul li:last-child {
   background-color: hsl(205, 65%, 55%);
   border-radius: 3px;
   margin-left: 1rem;
+  transition: all 550ms;
 }
 
 header ul li:last-child a {
   color: hsl(205, 100%, 97%);
+}
+
+header ul li:last-child:hover {
+  box-shadow: 0px 2px 4px hsla(210, 6%, 42%, 0.50);
+  background-color: hsl(205, 86%, 55%);
+}
+
+header ul li:last-child a:hover {
+  border: none;
 }
 
     /*-- Jumbotron banner --*/
@@ -132,7 +156,7 @@ section.jumbotron {
   margin-top: 2rem;
 }
 
-.headline-banner .botton {
+.headline-banner button {
   color: hsl(205, 100%, 97%);
   text-align: center;
   max-width: 18rem;
@@ -142,14 +166,24 @@ section.jumbotron {
   background-color: hsl(205, 65%, 55%);
   border-radius: 4px;
   justify-content: center;
+  cursor: pointer;
+  -webkit-transition-property: box-shadow, background-color;
+  transition-property: box-shadow, background-color;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
-.botton span {
+button span {
   font-size: 2rem;
 }
 
-.botton i {
+button i {
   margin-right: 1rem;
+}
+
+.headline-banner button:hover {
+  box-shadow: 0px 2px 4px hsla(210, 6%, 42%, 0.50);
+  background-color: hsl(205, 86%, 55%);
 }
 
     /*-- About of Academy --*/
@@ -206,6 +240,19 @@ section.academy .item {
   border: 2px solid hsl(210, 24%, 93%);
   border-radius: 4px;
   margin-bottom: 1.5rem;
+  cursor: pointer;
+  -webkit-transition-property: box-shadow, border-color, top;
+  transition-property: box-shadow, border-color, top;
+  -webkit-transition-duration: 700ms;
+  transition-duration: 700ms;
+
+}
+
+section.academy .item:hover {
+  border: 2px solid hsl(205, 84%, 74%);
+  box-shadow: 0 10px 24px hsla(209, 34%, 30%, 0.16);
+  position: relative;
+  top: -0.125rem;
 }
 
 .news div.image {
@@ -220,18 +267,35 @@ section.academy .item {
 
 .news .text {
   width: 60%;
-  padding: 2rem 1.125rem 1rem 0;
+  padding: 2rem 1rem 1rem 0;
 }
 
 .news .text p {
   font-size: 1.125rem;
   color: hsl(209, 34%, 30%);
   margin: 0.5rem 0 1.125rem 0;
+  transition: color 600ms;
 }
 
 .news .text h5 {
   color: #4A90E2;
+  transition: color 600ms;
 }
+
+.item:hover h3 {
+  color: hsl(205, 82%, 33%);
+}
+
+.item:hover p {
+  font-weight: 600;
+  color: hsl(205, 100%, 21%);
+}
+
+.item:hover h5 {
+  font-weight: 600;
+  color: hsl(166, 64%, 49%);
+}
+
 
     /*-- Start learning --*/
 
@@ -251,8 +315,17 @@ section .path {
   width: 25%;
   margin: 0 4rem 4rem 0;
   background-color: white;
-  box-shadow: 0 3px 6px hsla(210, 6%, 42%, 0.73);
+  box-shadow: 3px 3px 6px hsla(210, 6%, 42%, 0.73);
   flex-grow: 1;
+    -webkit-transition: box-shadow 500ms ease-in, top 800ms ease-in;
+  transition: box-shadow 500ms ease-in, top 800ms ease-in;
+}
+
+section .path:hover {
+  cursor: pointer;
+  box-shadow: 0 15px 25px hsla(210, 6%, 42%, 0.65);
+  position: relative;
+  top: -0.5rem;
 }
 
 section .path img {
@@ -263,6 +336,38 @@ section .path .details {
   text-align: left;
   min-height: 17rem;
   padding: 1.25rem 2.75rem;
+}
+
+.details div.flex {
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .path .badge {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-align: center;
+  min-width: 3.25rem;
+  border-radius: 4px;
+  padding: 0.25rem 1rem;
+}
+
+.path .badge.open {
+  color: hsl(42, 63%, 48%);
+  background-color: hsl(45, 100%, 96%);
+  border: 1px solid hsl(43, 89%, 70%);
+}
+
+.path .badge.popular {
+  color: hsl(205, 65%, 55%);
+  background-color: hsl(205, 79%, 92%);
+  border: 1px solid hsl(205, 84%, 74%);
+}
+
+.path .badge.new {
+  color: hsl(170, 91%, 32%);
+  background-color: hsl(165, 67%, 96%);
+  border: 1px solid hsl(163, 75%, 87%);
 }
 
 .details h4 {
@@ -284,6 +389,23 @@ section .path .details {
   margin-right: 0.75rem;
   font-weight: 600;
 }
+
+.path:hover h3 {
+  color: hsl(205, 82%, 33%);
+}
+
+.path:hover h4 {
+  color: hsl(205, 84%, 74%);
+}
+
+.path:hover ul li {
+  font-weight: 600;
+}
+
+.path:hover ul li i {
+  color: hsl(166, 64%, 49%);
+}
+
     /*-- Thesis exhibit --*/
 
 section.thesis {
@@ -311,6 +433,10 @@ footer div.flex-content {
 
 footer .language i {
   padding: 1.5rem 0.5rem;
+}
+
+footer .language:hover {
+  cursor: pointer;
 }
 
 footer .academy-logo {
@@ -343,4 +469,9 @@ footer nav span {
 footer nav span a {
   font-size: 1.25rem;
   color: hsl(205, 100%, 97%);
+}
+
+footer nav span a:hover {
+  padding-bottom: 0.125rem;
+  border-bottom: 1.5px solid;
 }
