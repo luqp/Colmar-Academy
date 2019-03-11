@@ -67,6 +67,7 @@ h1, h2, h3 {
   box-shadow: 0px 5px 15px hsla(210, 6%, 42%, 0.73);
 }
 
+
     /*-- Header --*/
 
 header div.flex-content {
@@ -102,6 +103,10 @@ header ul li {
   padding: 0.5rem 1rem;
 }
 
+header ul li .movil {
+  display: none;
+}
+
 header ul li a:hover {
   color: hsl(205, 100%, 21%);
   padding-bottom: 0.5rem;
@@ -126,6 +131,29 @@ header ul li:last-child:hover {
 
 header ul li:last-child a:hover {
   border: none;
+}
+
+@media only screen and (max-width: 1280px)  {
+  header ul li a {
+    display: none;
+  }
+  header ul li {
+    padding: 0.5rem 1.75rem;
+  }
+  header ul li .movil {
+    display: block;
+    height: 1.25rem;
+    width: auto;
+  }
+  ul svg path {
+    fill: hsl(209, 23%, 60%);
+  }
+  header ul li:hover path {
+    fill: hsl(205, 100%, 21%);
+  }
+  header ul li:last-child:hover path {
+    fill: hsl(205, 100%, 97%);
+  }
 }
 
     /*-- Jumbotron banner --*/
@@ -184,6 +212,38 @@ button i {
 .headline-banner button:hover {
   box-shadow: 0px 2px 4px hsla(210, 6%, 42%, 0.50);
   background-color: hsl(205, 86%, 55%);
+}
+
+@media only screen and (max-width: 1430px) {
+  .flex-content {
+    margin: 0 2rem;
+  }
+  h1 {
+    font-size: 3.25rem;
+  }
+  .headline-banner p {
+    font-size: 2rem;
+  }
+  .img-banner {
+    padding: 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 1280px)  {
+  section.jumbotron .flex-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .img-banner, .headline-banner {
+    width: 90%;
+  }
+  .img-banner {
+    padding-top: 3.25rem;
+  }
+  .headline-banner {
+    padding: 0 0 3.25rem 0;
+    margin-left: 0;
+  }
 }
 
     /*-- About of Academy --*/
@@ -270,6 +330,11 @@ section.academy .item:hover {
   padding: 2rem 1rem 1rem 0;
 }
 
+.item:hover .text {
+  line-height: 1.2;
+  padding-top: 1.25rem;
+}
+
 .news .text p {
   font-size: 1.125rem;
   color: hsl(209, 34%, 30%);
@@ -296,6 +361,55 @@ section.academy .item:hover {
   color: hsl(166, 64%, 49%);
 }
 
+@media only screen and (max-width: 1430px) {
+  .content {
+    width: 60%;
+    line-height: 1;
+  }
+  .content .media {
+    margin-bottom: 0.25rem;
+  }
+
+  .content h2 {
+    padding-top: 1rem;
+  }
+  .news {
+    width: 40%;
+  }
+  .content div.cite {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0.5rem 1rem 0 2rem;
+  }
+  .news div.image {
+    width: 40%;
+    margin: 1rem;
+  }
+  .news .text {
+    line-height: 1.2;
+    padding: 1rem 0.5rem 1rem 0;
+  }
+  .item h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .academy .flex-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .content, .news {
+    width: 90%;
+  }
+  .news {
+    margin-left: 0;
+    margin-bottom: 6.5rem;
+  }
+  .thesis .content p {
+    margin-bottom: 3.5rem;
+  }
+}
 
     /*-- Start learning --*/
 
@@ -315,7 +429,8 @@ section .path {
   width: 25%;
   margin: 0 4rem 4rem 0;
   background-color: white;
-  box-shadow: 3px 3px 6px hsla(210, 6%, 42%, 0.73);
+  border-radius: 4px;
+  box-shadow: 0 3px 6px hsla(210, 6%, 42%, 0.73);
   flex-grow: 1;
     -webkit-transition: box-shadow 500ms ease-in, top 800ms ease-in;
   transition: box-shadow 500ms ease-in, top 800ms ease-in;
@@ -330,11 +445,12 @@ section .path:hover {
 
 section .path img {
   width: 100%;
+  border-radius: 4px 4px 0 0;
 }
 
 section .path .details {
   text-align: left;
-  min-height: 17rem;
+  min-height: 15rem;
   padding: 1.25rem 2.75rem;
 }
 
@@ -406,6 +522,41 @@ section .path .badge {
   color: hsl(166, 64%, 49%);
 }
 
+@media only screen and (max-width: 1680px) {
+  section .path .details {
+    min-height: 13.5rem;
+    padding: 1rem 1.5rem;
+  }
+  .details h3 {
+    font-size: 1.5rem;
+  }
+  .details h4 {
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .details ul {
+    position: absolute;
+    opacity: 0;
+    transition: top 5s, opacity 10ms;
+  }
+  section .path .details {
+    min-height: 4rem;
+  }
+  .details h4 {
+    font-size: 1.25rem;
+  }
+  .path:hover h4 {
+    font-weight: 600;
+  }
+  .path:hover ul {
+    position: relative;
+    top: 0.25rem;
+    opacity: 1;
+  }
+}
+
     /*-- Thesis exhibit --*/
 
 section.thesis {
@@ -418,6 +569,7 @@ section.thesis {
   margin-top: 1.75rem;
 }
 
+
     /*-- Footer --*/
 
 footer {
@@ -426,7 +578,6 @@ footer {
 }
 
 footer div.flex-content {
-  height: 15rem;
   padding: 4rem 0 7.5rem 0;
   flex-direction: column;
 }
@@ -474,4 +625,15 @@ footer nav span a {
 footer nav span a:hover {
   padding-bottom: 0.125rem;
   border-bottom: 1.5px solid;
+}
+
+@media only screen and (max-width: 1430px) {
+  .thesis .content p {
+    font-size: 1.25rem;
+    line-height: 1.35;
+    margin-top: 0.75rem;
+  }
+  footer div.flex-content {
+    padding: 1.75rem 0 3rem 0;
+  }
 }
