@@ -142,10 +142,9 @@ header ul li:last-child a:hover {
   }
   header ul.flex li {
     padding: 0.5rem 0.75rem;
-    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
-
 @media only screen and (max-width: 1280px)  {
   .web {
     display: none;
@@ -249,7 +248,6 @@ button i {
     padding: 2rem 0;
   }
 }
-
 @media only screen and (max-width: 1280px)  {
   section.jumbotron .flex-content {
     flex-wrap: wrap;
@@ -272,7 +270,6 @@ button i {
     margin: 2rem auto;
   }
 }
-
 @media only screen and (max-width: 860px) {
   section.jumbotron {
     margin-bottom: 0;
@@ -300,6 +297,7 @@ button i {
     font-weight: 500;
   }
 }
+
 
     /*-- About of Academy --*/
 
@@ -701,7 +699,6 @@ section .path .badge {
     padding-top: 0;
   }
 }
-
 @media only screen and (max-width: 1280px) {
   .details ul {
     position: absolute;
@@ -727,7 +724,6 @@ section .path .badge {
     padding-bottom: 1rem;
   }
 }
-
 @media only screen and (max-width: 860px) {
   .caption {
     margin: 0 1rem 2rem 1rem;
@@ -735,7 +731,6 @@ section .path .badge {
     padding: 1rem 0;
   }
 }
-
 @media only screen and (max-width: 650px) {
   .caption {
     padding-top: 0px;
@@ -751,6 +746,7 @@ section .path .badge {
   section .path {
     width: 100%;
     margin: 1rem 1rem;
+    background-color: #F9FDFF;
   }
   .details h3 {
     font-size: 2rem;
@@ -777,7 +773,6 @@ section.thesis {
     margin-top: 0.75rem;
   }
 }
-
 @media only screen and (max-width: 1280px) {
   .thesis .caption {
     justify-content: flex-start;
@@ -794,7 +789,6 @@ section.thesis {
     width: auto;
   }
 }
-
 @media only screen and (max-width: 650px) {
   .thesis h2 {
     font-size: 2rem;
@@ -829,6 +823,7 @@ section.thesis {
     font-size: 1rem;
   }
 }
+
     /*-- Footer --*/
 
 footer {
